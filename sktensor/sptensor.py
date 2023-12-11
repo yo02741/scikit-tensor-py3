@@ -56,7 +56,7 @@ class sptensor(tensor_mixin):
 
     Examples
     --------
-    >>> S = sptensor(([0,1,2], [3,2,0], [2,2,2]), [1,1,1], shape=(10, 20, 5), dtype=np.float)
+    >>> S = sptensor(([0,1,2], [3,2,0], [2,2,2]), [1,1,1], shape=(10, 20, 5), dtype=float)
     >>> S.shape
     (10, 20, 5)
     >>> S.dtype

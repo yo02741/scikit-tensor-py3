@@ -53,7 +53,7 @@ def test_nonEqualLength(subs):
 
 
 def test_unfold(T, subs, vals, shape):
-    Td = dtensor(np.zeros(shape, dtype=np.float32))
+    Td = dtensor(np.zeros(shape, dtype=np.float64))
     Td[subs] = vals
 
     for i in range(len(shape)):

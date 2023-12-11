@@ -268,7 +268,7 @@ def innerprod(X, Y):
     return np.dot(X.flatten(), Y.flatten())
 
 
-def nvecs(X, n, rank, do_flipsign=True, dtype=np.float):
+def nvecs(X, n, rank, do_flipsign=True, dtype=float):
     """
     Eigendecomposition of mode-n unfolding of a tensor
     """
@@ -317,7 +317,7 @@ def center_matrix(X):
 
 def scale(X, n):
     Xn = unfold(X, n)
-    m = np.float_(np.sqrt((Xn ** 2).sum(axis=1)))
+    m = float(np.sqrt((Xn ** 2).sum(axis=1)))
     m[m == 0] = 1
     for i in range(Xn.shape[0]):
         Xn[i, :] = Xn[i] / m[i]
